@@ -407,20 +407,30 @@ const Estacao = () => {
     }
     
     const getDisplayGraficoData = (selecaoVariavel: TSelecaoVariavel, estacaoDataData: TEstacaoData | undefined): string => {
-        if (estacaoDataData !== undefined) {
-            let valorBruto = estacaoDataData.condicoes_historicas[0][selecaoVariavel]
-            
-            if (typeof valorBruto === "boolean") {
-                if (valorBruto === true) {
+        const dadosGrafico = getFormattedGrafico(selecaoVariavel, estacaoDataData)
+        if (dadosGrafico.length) {
+            let valorBruto = dadosGrafico[dadosGrafico.length-1].Valor
+            if (selecaoVariavel === "rain_presence") {
+                if (valorBruto === 1) {
                     return "Sim"
                 } else {
                     return "Não"
                 }
-            } else if (typeof valorBruto === "number") {
-                return valorBruto.toLocaleString('pt-BR', { minimumFractionDigits: 1,maximumFractionDigits: 2 })
             } else {
-                return ""
-            } 
+                let suffixo = ""
+                if (selecaoVariavel === "temperature") {
+                    suffixo = " °C"
+                } else if (selecaoVariavel === "humidity") {
+                    suffixo = " %"
+                } else if (selecaoVariavel === "pressure") {
+                    suffixo = " hPa"
+                } else if (selecaoVariavel === "dioxide_carbon_ppm") {
+                    suffixo = " ppm"
+                } else {
+                    suffixo = ""
+                }
+                return valorBruto.toLocaleString('pt-BR', { minimumFractionDigits: 1,maximumFractionDigits: 2 }) + suffixo
+            }
         
         } else {
           return ""
@@ -438,22 +448,6 @@ const Estacao = () => {
             return "Dióxido de Carbono"
         } else if (selecaoVariavel === "rain_presence") {
             return "Presença de Chuva"
-        } else {
-            return ""
-        }
-    }
-
-    const getGraficoSuffix = (selecaoVariavel: TSelecaoVariavel): string => {
-        if (selecaoVariavel === "temperature") {
-            return " °C"
-        } else if (selecaoVariavel === "humidity") {
-            return " %"
-        } else if (selecaoVariavel === "pressure") {
-            return " hPa"
-        } else if (selecaoVariavel === "dioxide_carbon_ppm") {
-            return " ppm"
-        } else if (selecaoVariavel === "rain_presence") {
-            return ""
         } else {
             return ""
         }
@@ -553,7 +547,7 @@ const Estacao = () => {
                                 <ChartTitle>{getGraficoTitle(selecaoVariavel)}</ChartTitle>
                                 <ChartLabelArea>
                                     <ChartLabelNumber>
-                                        {getDisplayGraficoData(selecaoVariavel, estacaoDataData) + getGraficoSuffix(selecaoVariavel)}
+                                        {getDisplayGraficoData(selecaoVariavel, estacaoDataData)}
                                     </ChartLabelNumber>
                                 </ChartLabelArea>
                                 </ChartName>
