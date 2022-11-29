@@ -9,10 +9,10 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { Line, LineChart, ResponsiveContainer, Tooltip as TooltipRecharts, XAxis } from 'recharts';
 import Co2Icon from '@mui/icons-material/Co2';
 import DeviceThermostatOutlinedIcon from '@mui/icons-material/DeviceThermostatOutlined';
+import LocalDrinkOutlinedIcon from '@mui/icons-material/LocalDrinkOutlined';
 import WaterIcon from '@mui/icons-material/Water';
 import OpacityOutlinedIcon from '@mui/icons-material/OpacityOutlined';
 import SpeedOutlinedIcon from '@mui/icons-material/SpeedOutlined';
-import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { getGlobalData } from '../../fetching/api';
@@ -544,7 +544,7 @@ const VisaoGeral = () => {
                         <SmallCard>
                           <TitleIcon>
                             <SmallCardTitle>{globalDataData.preview_station.record.dewpoint.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} °C</SmallCardTitle>
-                            <SmallCardIcon><HelpOutlineOutlinedIcon fontSize='inherit'/></SmallCardIcon>
+                            <SmallCardIcon><LocalDrinkOutlinedIcon fontSize='inherit'/></SmallCardIcon>
                           </TitleIcon>
                           <Description>Temperatura de Orvalho</Description>
                         </SmallCard>

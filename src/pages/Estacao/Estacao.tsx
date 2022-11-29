@@ -6,7 +6,7 @@ import WaterIcon from '@mui/icons-material/Water';
 
 import OpacityOutlinedIcon from '@mui/icons-material/OpacityOutlined';
 import SpeedOutlinedIcon from '@mui/icons-material/SpeedOutlined';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+
 import { Line, LineChart, ResponsiveContainer, Tooltip as TooltipRecharts, XAxis } from 'recharts';
 import { useParams } from 'react-router-dom';
 import { getEstacaoData } from '../../fetching/api';
