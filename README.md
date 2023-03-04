@@ -1,5 +1,43 @@
-# WeatherLogger - Front
-Projeto de miniestações de meteorologia para Laboratório integrado VII 
+# WeatherLogger - Frontend
 
-Implementação do Front-end em React + MUI
+## Table of Contents
++ [About](#about)
++ [Getting Started](#getting_started)
++ [Usage](#usage)
++ [Live Demo](#demo)
 
+## About <a name = "about"></a>
+Frontend implementation of a meteorological mini-stations for the VII Integrated Laboratory course at the Federal University of Bahia.
+
+Implemented using React + MUI
+
+Backend implementation in FastAPI: [WeatherLogger - Backend](https://github.com/b-rbmp/weatherlogger-backend)
+
+## Getting Started <a name = "getting_started"></a>
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+
+### Prerequisites
+
+Install all required dependencies, with npm
+
+```
+npm install
+```
+
+## Usage <a name = "usage"></a>
+
+Run the project with npm
+
+```
+npm start
+```
+
+Build the project with npm
+
+```
+npm run build
+```
+
+## Live Demo <a name = "demo"></a>
+
+[WeatherLogger](https://weatherlogger.vercel.app/)
