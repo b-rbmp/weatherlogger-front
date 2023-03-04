@@ -7,7 +7,7 @@
 + [Live Demo](#demo)
 
 ## About <a name = "about"></a>
-Frontend implementation of a meteorological mini-stations for the VII Integrated Laboratory course at the Federal University of Bahia.
+Frontend implementation of a meteorological mini-stations project for the VII Integrated Laboratory course at the Federal University of Bahia.
 
 Implemented using React + MUI
 
