@@ -11,8 +11,8 @@ Frontend implementation of a meteorological mini-stations project for the VII In
 
 Implemented using React + MUI
 
-Backend implementation in FastAPI: [WeatherLogger - Backend](https://github.com/b-rbmp/weatherlogger-backend)
-Microcontroller implementation in ESP8266: [WeatherLogger - Microcontroller](https://github.com/b-rbmp/weatherlogger-mcu)
+- Backend implementation in FastAPI: [WeatherLogger - Backend](https://github.com/b-rbmp/weatherlogger-backend)
+- Microcontroller implementation in ESP8266: [WeatherLogger - Microcontroller](https://github.com/b-rbmp/weatherlogger-mcu)
 
 ## Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
